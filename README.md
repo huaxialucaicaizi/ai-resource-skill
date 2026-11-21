@@ -45,11 +45,11 @@ npx skills add huaxialucaicaizi/ai-resource-skill
 把仓库里的 `skills/ai-resource-guide/` 拷到 agent 的 skills 目录，保证出现 `…/ai-resource-guide/SKILL.md`（同目录下的 `references/sources.yaml` 一并带上，离线可用、无需 API key）：
 
 ```bash
-# Claude Code
-rm -rf /tmp/ai-resource-skill ~/.claude/skills/ai-resource-guide && git clone --depth 1 https://github.com/huaxialucaicaizi/ai-resource-skill.git /tmp/ai-resource-skill && mkdir -p ~/.claude/skills && cp -R /tmp/ai-resource-skill/skills/ai-resource-guide ~/.claude/skills/ai-resource-guide && rm -rf /tmp/ai-resource-skill
+# Claude Code（当前内容在 v1 分支；合并进 main 后可去掉 --branch v1）
+rm -rf /tmp/ai-resource-skill ~/.claude/skills/ai-resource-guide && git clone --depth 1 --branch v1 https://github.com/huaxialucaicaizi/ai-resource-skill.git /tmp/ai-resource-skill && mkdir -p ~/.claude/skills && cp -R /tmp/ai-resource-skill/skills/ai-resource-guide ~/.claude/skills/ai-resource-guide && rm -rf /tmp/ai-resource-skill
 
-# Cursor
-rm -rf /tmp/ai-resource-skill ~/.cursor/skills/ai-resource-guide && git clone --depth 1 https://github.com/huaxialucaicaizi/ai-resource-skill.git /tmp/ai-resource-skill && mkdir -p ~/.cursor/skills && cp -R /tmp/ai-resource-skill/skills/ai-resource-guide ~/.cursor/skills/ai-resource-guide && rm -rf /tmp/ai-resource-skill
+# Cursor（同上）
+rm -rf /tmp/ai-resource-skill ~/.cursor/skills/ai-resource-guide && git clone --depth 1 --branch v1 https://github.com/huaxialucaicaizi/ai-resource-skill.git /tmp/ai-resource-skill && mkdir -p ~/.cursor/skills && cp -R /tmp/ai-resource-skill/skills/ai-resource-guide ~/.cursor/skills/ai-resource-guide && rm -rf /tmp/ai-resource-skill
 ```
 
 ---
@@ -205,11 +205,11 @@ Per [vercel-labs/skills](https://github.com/vercel-labs/skills) docs (`npx skill
 Copy `skills/ai-resource-guide/` so agents see `…/ai-resource-guide/SKILL.md` (with sibling `references/sources.yaml` for offline use; no API key):
 
 ```bash
-# Claude Code
-rm -rf /tmp/ai-resource-skill ~/.claude/skills/ai-resource-guide && git clone --depth 1 https://github.com/huaxialucaicaizi/ai-resource-skill.git /tmp/ai-resource-skill && mkdir -p ~/.claude/skills && cp -R /tmp/ai-resource-skill/skills/ai-resource-guide ~/.claude/skills/ai-resource-guide && rm -rf /tmp/ai-resource-skill
+# Claude Code (content is on branch v1 until merged to main; drop --branch v1 after merge)
+rm -rf /tmp/ai-resource-skill ~/.claude/skills/ai-resource-guide && git clone --depth 1 --branch v1 https://github.com/huaxialucaicaizi/ai-resource-skill.git /tmp/ai-resource-skill && mkdir -p ~/.claude/skills && cp -R /tmp/ai-resource-skill/skills/ai-resource-guide ~/.claude/skills/ai-resource-guide && rm -rf /tmp/ai-resource-skill
 
-# Cursor
-rm -rf /tmp/ai-resource-skill ~/.cursor/skills/ai-resource-guide && git clone --depth 1 https://github.com/huaxialucaicaizi/ai-resource-skill.git /tmp/ai-resource-skill && mkdir -p ~/.cursor/skills && cp -R /tmp/ai-resource-skill/skills/ai-resource-guide ~/.cursor/skills/ai-resource-guide && rm -rf /tmp/ai-resource-skill
+# Cursor (same)
+rm -rf /tmp/ai-resource-skill ~/.cursor/skills/ai-resource-guide && git clone --depth 1 --branch v1 https://github.com/huaxialucaicaizi/ai-resource-skill.git /tmp/ai-resource-skill && mkdir -p ~/.cursor/skills && cp -R /tmp/ai-resource-skill/skills/ai-resource-guide ~/.cursor/skills/ai-resource-guide && rm -rf /tmp/ai-resource-skill
 ```
 
 ---
