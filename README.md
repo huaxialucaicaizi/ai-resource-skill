@@ -40,17 +40,17 @@ npx skills add huaxialucaicaizi/ai-resource-skill
 - **约定来源**：vercel-labs/skills 的 `docs/commands.md` / `docs/creating-skills.md`（本仓库 skill 路径为 `skills/ai-resource-guide/SKILL.md`）。  
 - **本环境验证**：已用 `npx skills add <本地仓库路径> --list` 确认能发现 **ai-resource-guide**。针对 GitHub shorthand 的完整安装，请在本机网络下再跑一次上面的命令。
 
-### 方式 B：git clone 到本地 skills 目录（通用）
+### 方式 B：复制 Skill 目录到本地（通用）
+
+把仓库里的 `skills/ai-resource-guide/` 拷到 agent 的 skills 目录，保证出现 `…/ai-resource-guide/SKILL.md`（同目录下的 `references/sources.yaml` 一并带上，离线可用、无需 API key）：
 
 ```bash
-# Claude Code 示例
-git clone https://github.com/huaxialucaicaizi/ai-resource-skill.git ~/.claude/skills/ai-resource-skill
+# Claude Code
+rm -rf /tmp/ai-resource-skill ~/.claude/skills/ai-resource-guide && git clone --depth 1 https://github.com/huaxialucaicaizi/ai-resource-skill.git /tmp/ai-resource-skill && mkdir -p ~/.claude/skills && cp -R /tmp/ai-resource-skill/skills/ai-resource-guide ~/.claude/skills/ai-resource-guide && rm -rf /tmp/ai-resource-skill
 
-# Cursor 示例
-git clone https://github.com/huaxialucaicaizi/ai-resource-skill.git ~/.cursor/skills/ai-resource-skill
+# Cursor
+rm -rf /tmp/ai-resource-skill ~/.cursor/skills/ai-resource-guide && git clone --depth 1 https://github.com/huaxialucaicaizi/ai-resource-skill.git /tmp/ai-resource-skill && mkdir -p ~/.cursor/skills && cp -R /tmp/ai-resource-skill/skills/ai-resource-guide ~/.cursor/skills/ai-resource-guide && rm -rf /tmp/ai-resource-skill
 ```
-
-克隆后即可离线阅读 `data/sources.yaml` 与 `skills/ai-resource-guide/`。无需 API key。
 
 ---
 
@@ -156,15 +156,14 @@ scripts/check_links.py     # 链接检查
 ## 贡献与原则
 
 - 不新增未经观测的数字、粉丝数、排名或链接。  
-- 补数据请写明查询日期与口径；未知就写未知。  
-- 不要加入与「花叔」相关的账号或课程。
+- 补数据请写明查询日期与口径；未知就写未知。
 
 ---
 
 ## 安装验证说明
 
 - `npx skills add huaxialucaicaizi/ai-resource-skill`：符合 vercel-labs/skills 已文档化的 GitHub shorthand 约定；本环境已用本地路径 `npx skills add … --list` 核对能发现 `ai-resource-guide`。  
-- `git clone … ~/.claude/skills` / `~/.cursor/skills`：通用目录约定，已在文档中写明；不依赖第三方 registry。
+- 方式 B：本环境已实测上述 one-liner，安装后存在 `~/.claude/skills/ai-resource-guide/SKILL.md` 与 `references/sources.yaml`（Cursor 路径同理）。
 
 ---
 
@@ -201,14 +200,17 @@ npx skills add huaxialucaicaizi/ai-resource-skill
 
 Per [vercel-labs/skills](https://github.com/vercel-labs/skills) docs (`npx skills add owner/repo` discovers `skills/*/SKILL.md`). This repo’s skill lives at `skills/ai-resource-guide/SKILL.md`.
 
-### B. git clone into agent skill folders
+### B. Copy the skill folder into agent skills dirs
+
+Copy `skills/ai-resource-guide/` so agents see `…/ai-resource-guide/SKILL.md` (with sibling `references/sources.yaml` for offline use; no API key):
 
 ```bash
-git clone https://github.com/huaxialucaicaizi/ai-resource-skill.git ~/.claude/skills/ai-resource-skill
-git clone https://github.com/huaxialucaicaizi/ai-resource-skill.git ~/.cursor/skills/ai-resource-skill
-```
+# Claude Code
+rm -rf /tmp/ai-resource-skill ~/.claude/skills/ai-resource-guide && git clone --depth 1 https://github.com/huaxialucaicaizi/ai-resource-skill.git /tmp/ai-resource-skill && mkdir -p ~/.claude/skills && cp -R /tmp/ai-resource-skill/skills/ai-resource-guide ~/.claude/skills/ai-resource-guide && rm -rf /tmp/ai-resource-skill
 
-Offline-friendly; no API key required to read the bundled list.
+# Cursor
+rm -rf /tmp/ai-resource-skill ~/.cursor/skills/ai-resource-guide && git clone --depth 1 https://github.com/huaxialucaicaizi/ai-resource-skill.git /tmp/ai-resource-skill && mkdir -p ~/.cursor/skills && cp -R /tmp/ai-resource-skill/skills/ai-resource-guide ~/.cursor/skills/ai-resource-guide && rm -rf /tmp/ai-resource-skill
+```
 
 ---
 
@@ -264,5 +266,4 @@ Weekly GitHub Action + `scripts/check_links.py`. Soft-fail reporting; **403/429*
 ## Principles
 
 - Never invent numbers, ranks, or URLs.  
-- Keep 未知 / 待核实 when unverified.  
-- No accounts/courses related to 「花叔」.
+- Keep 未知 / 待核实 when unverified.
