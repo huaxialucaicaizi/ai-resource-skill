@@ -52,6 +52,10 @@ def collect_urls(doc: dict) -> list[tuple[str, str]]:
         for u in s.get("urls") or []:
             if isinstance(u, str) and u.startswith(("http://", "https://")):
                 out.append((sid, u))
+        for t in s.get("tutorials") or []:
+            link = t.get("link") if isinstance(t, dict) else None
+            if isinstance(link, str) and link.startswith(("http://", "https://")):
+                out.append((sid, link))
         # Also collect 数据来源 URLs inside 榜单明细
         data = s.get("数据") or {}
         for row in data.get("榜单明细") or []:

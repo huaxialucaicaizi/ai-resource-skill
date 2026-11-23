@@ -1,7 +1,7 @@
-# Link check — 2026-11-21T06:19:17.609998+00:00
+# Link check — 2026-11-23T21:51:03.755614+00:00
 
-- Total: 64
-- ok: 63
+- Total: 84
+- ok: 83
 - 需人工确认: 1
 - dead: 0
 
@@ -38,10 +38,10 @@
 - `demis-x` — https://x.com/demishassabis — HTTP 200 — 
 - `deepseek-x` — https://x.com/deepseek_ai — HTTP 200 — 
 - `qwen-x` — https://x.com/Alibaba_Qwen — HTTP 200 — 
-- `samuel-douyin` — https://www.douyin.com/user/MS4wLjABAAAAcBGY4RqDTLberZGiFTk-nG_L0hVwrFC7Bii_20YdBgBDGu-9JoA2L6jtkpdnpBpr — HTTP 200 — 
 - `xulaoshi-ai` — https://www.xiaohongshu.com/user/profile/66f59238000000001d030d56 — HTTP 200 — 
 - `xulaoshi-ai` — https://www.douyin.com/user/MS4wLjABAAAAJNts8oZ5FOMjrt5nXGQVcw47VcJvq29Pnvn9kjcODs0pkWQPLwz1CyNULDlvnlHK — HTTP 200 — 
 - `sujianbai-suna` — https://www.xiaohongshu.com/user/profile/63247336000000002303bb1d — HTTP 200 — 
+- `samuel-douyin` — https://www.douyin.com/user/MS4wLjABAAAAcBGY4RqDTLberZGiFTk-nG_L0hVwrFC7Bii_20YdBgBDGu-9JoA2L6jtkpdnpBpr — HTTP 200 — 
 - `muzibuxiedaima` — https://www.xiaohongshu.com/user/profile/62972c5f00000000210299fd — HTTP 200 — 
 - `muzibuxiedaima` — https://www.douyin.com/user/MS4wLjABAAAAy_5W-LNi-cp7QbySyzEm3PskTDnDMUF34XijUKmZvywSej4Pm4UtLhQHiY_7Fryj — HTTP 200 — 
 - `qiuzhi2046` — https://www.douyin.com/user/MS4wLjABAAAAwbbVuf1W2DdgRe0xCa0oxg1ZIHbzuiTzyjq3NcOVgBuu6qIidYlMYqbL3ZFY2swu — HTTP 200 — 
@@ -56,6 +56,26 @@
 - `kaola-wang` — https://www.xiaohongshu.com/user/profile/65d6bc16000000001700780e — HTTP 200 — 
 - `weixiao-bangong` — https://www.douyin.com/user/MS4wLjABAAAAd9F0YTDpiF2a7_hU3ukXL7ytpRVVm09EwqZ6xvY1GohGfJTQqTGCIVl-z6zhxtou — HTTP 200 — 
 - `wangxiaoer-data` — https://www.douyin.com/user/MS4wLjABAAAA0ITSyg9jKeT1x5pIF0G7W8547uslYxzsK_IQJQ_UAxGkRHOqAuiLyiVJLtcCEzT3 — HTTP 200 — 
+- `banpie-xhs` — https://www.xiaohongshu.com/user/profile/5d2dd068000000001600f52c — HTTP 200 — 
+- `zhangyuncai-douyin` — https://www.douyin.com/user/MS4wLjABAAAAccw_6pHbTgGLOFXtLh2vNTeXPtTS6vGPiTjyDvjJaAv4HAmMkaqvS3k1aZL7ret0 — HTTP 200 — 
+- `meta-x` — https://x.com/AIatMeta — HTTP 200 — 
+- `xai-x` — https://x.com/SpaceXSI — HTTP 200 — 
+- `mistral-x` — https://x.com/MistralAI — HTTP 200 — 
+- `huggingface-x` — https://x.com/huggingface — HTTP 200 — 
+- `perplexity-x` — https://x.com/perplexity_ai — HTTP 200 — 
+- `kimi-x` — https://x.com/Kimi_Moonshot — HTTP 200 — 
+- `zai-x` — https://x.com/Zai_org — HTTP 200 — 
+- `minimax-x` — https://x.com/MiniMax_AI — HTTP 200 — 
+- `claude-x` — https://x.com/claudeai — HTTP 200 — 
+- `gemini-x` — https://x.com/GeminiApp — HTTP 200 — 
+- `cursor-x` — https://x.com/cursor_ai — HTTP 200 — 
+- `mensch-x` — https://x.com/arthurmensch — HTTP 200 — 
+- `aravind-x` — https://x.com/AravSrinivas — HTTP 200 — 
+- `clem-x` — https://x.com/ClementDelangue — HTTP 200 — 
+- `zuck-x` — https://x.com/finkd — HTTP 200 — 
+- `alexwang-x` — https://x.com/alexandr_wang — HTTP 200 — 
+- `truell-x` — https://x.com/mntruell — HTTP 200 — 
+- `musk-x` — https://x.com/elonmusk — HTTP 200 — 
 - `ai-for-everyone` — https://www.coursera.org/learn/ai-for-everyone — HTTP 200 — 
 - `ai-for-everyone` — https://www.deeplearning.ai/courses/ai-for-everyone — HTTP 200 — 
 - `google-ai-essentials` — https://www.coursera.org/specializations/ai-essentials-google — HTTP 200 — 

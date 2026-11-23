@@ -20,10 +20,11 @@ License：MIT
 1. **按「你想做什么」整理好的信息源名单**（行业讯息 / 产品动态 / 场景教程 / 系统学习），每条都标好语言、访问、付费、适合谁和查询日期。  
 2. **一个 Agent Skill**：你告诉助手「我是谁、想学什么」，它只根据仓库里的数据，生成一份给你的清单。第一次用**不需要 API key，也不需要联网抓取**。
 
-> v1 已完成：名单 + 标签 + 避坑标准 + Skill + 链接巡检。  
-> **周报 / digest 不在 v1**，计划在 v2。
+> v1：名单 + 标签 + 避坑标准 + Skill + 链接巡检。  
+> **周报 / digest 不在 v1**，计划后续再做。  
+> **名单维护：每月复查一次**（链接、免费/付费政策、账号是否仍可用）。
 
-数据查询日期：**2026-11-20**（Asia/Shanghai）。看不到的字段一律写「未知」，不估算。
+主数据查询日期：**2026-11-20**（Asia/Shanghai）；后来补录的条目有各自的查询日期（如 2026-11-23）。看不到的字段一律写「未知」，不估算。
 
 ---
 
@@ -66,10 +67,11 @@ rm -rf /tmp/ai-resource-skill ~/.cursor/skills/ai-resource-guide && git clone --
 | --- | --- | --- |
 | **想跟上行业新闻** · Follow industry news | 跟中文科技 / AI 媒体 | [行业讯息](sources/industry.md) |
 | **想知道新产品新模型** · Track new products and models | 看官方 X 动态（需注意访问限制） | [产品动态](sources/products.md) |
-| **想学会做 PPT** · Learn AI for PPT | 短教程、办公场景 | [场景教程](sources/tutorials.md) |
+| **想学会做 PPT** · Learn AI for PPT | 短教程、办公场景（回答时先教程后博主） | [场景教程](sources/tutorials.md) |
 | **想学会写代码 / vibe coding** · Learn vibe coding | 零基础用 AI 做应用 | [场景教程](sources/tutorials.md) |
 | **想学会做视频 / 设计** · Learn AI video and design | AIGC 视频与创作流程 | [场景教程](sources/tutorials.md) |
 | **想学会数据分析** · Learn AI for data analysis | Excel / 表格 / 数据分析 | [场景教程](sources/tutorials.md) |
+| **想学会写文案** · Learn AI copywriting | 用 AI 写小红书 / 短视频文案 | [场景教程](sources/tutorials.md) |
 | **想系统学 AI** · Learn AI systematically | 官方/公开课程；先读避坑清单 | [系统学习](sources/learning.md) · [课程避坑](sources/course-pitfalls.md) |
 
 入口总表：[sources/routes.md](sources/routes.md)
@@ -81,14 +83,14 @@ rm -rf /tmp/ai-resource-skill ~/.cursor/skills/ai-resource-guide && git clone --
 
 ## 四类信息源（v1）
 
-| 分类 | 条数（含名单中的备选） | 说明 |
+| 分类 | 条数（含备选 / 整理者本人） | 说明 |
 | --- | ---: | --- |
-| 行业讯息 | 8 | 中文科技 / AI 媒体（公众号等） |
-| 产品动态 | 8 | X 官方公司号与对应负责人（正表） |
-| 场景教程 | 15 | PPT / vibe coding / 视频设计 / 数据分析（含备选） |
-| 系统学习 | 8 | 免费或官方课程入口 |
+| 行业讯息 | 8 | 中文科技 / AI 媒体（公众号等；智东西为备选） |
+| 产品动态 | 26 | X 官方公司号与负责人等（`x_list_url` 暂为 null，公开列表待建） |
+| 场景教程 | 17 | PPT / vibe coding / 视频设计 / 数据分析 / 写文案（含备选；可挂保姆教程） |
+| 系统学习 | 10 | 免费或官方课程入口 + 整理者本人账号（排序靠后） |
 
-每条源都包含：语言、国内能否直接访问、免费/付费、适合谁、数据（观测数字与口径）、查询日期。
+每条源都包含：语言、国内能否直接访问、免费/付费、适合谁、数据（观测数字与口径）、查询日期。场景教程可带 `tutorials` 字段（核实到的保姆教程）。
 
 ---
 
@@ -126,10 +128,10 @@ Awesome-AISourceHub 是一份按**平台**分栏的中文 AI 信息源名单（R
 
 ## 自动链接检查
 
-`.github/workflows/link-check.yml`：每周定时 + 可手动触发。  
+`.github/workflows/link-check.yml`：**每月**定时（每月 1 日）+ 可手动触发。  
 脚本 `scripts/check_links.py` 读取 `data/sources.yaml` 中的 URL，写出 `reports/` 报告，并在 Actions Job Summary 中汇总。  
 
-说明：x.com / 小红书 / 抖音等常拦截机器人；**HTTP 403 / 429 记为「需人工确认」**，不当作死链。无需配置 Secrets。
+说明：x.com / 小红书 / 抖音等常拦截机器人；**HTTP 403 / 429 记为「需人工确认」**，不当作死链。无需配置 Secrets。与「每月复查一次」名单维护节奏一致。
 
 本地运行：
 
@@ -184,9 +186,10 @@ This repository provides:
 2. An **Agent Skill** that turns your identity + goal into a personalized list **drawn only from the repo data**. First run needs **no API key and no network fetch**.
 
 > v1 ships the directory, tags, course-judgment checklist, Skill, and link checker.  
-> A **weekly digest is planned for v2** (not in v1).
+> A **weekly digest is planned later** (not in v1).  
+> **List maintenance: review once a month.**
 
-Observation date: **2026-11-20** (Asia/Shanghai). Unknown fields stay unknown — no estimates.
+Primary observation date: **2026-11-20** (Asia/Shanghai); later entries keep their own query dates. Unknown fields stay unknown — no estimates.
 
 ---
 
@@ -224,10 +227,11 @@ rm -rf /tmp/ai-resource-skill ~/.cursor/skills/ai-resource-guide && git clone --
 | --- | --- | --- |
 | **想跟上行业新闻** · Follow industry news | Chinese tech/AI media | [industry](sources/industry.md) |
 | **想知道新产品新模型** · Track new products and models | Official X accounts (access limits apply) | [products](sources/products.md) |
-| **想学会做 PPT** · Learn AI for PPT | Short tutorials | [tutorials](sources/tutorials.md) |
+| **想学会做 PPT** · Learn AI for PPT | Short tutorials (tutorials first, then bloggers) | [tutorials](sources/tutorials.md) |
 | **想学会写代码 / vibe coding** · Learn vibe coding | Zero-basis AI coding | [tutorials](sources/tutorials.md) |
 | **想学会做视频 / 设计** · Learn AI video and design | AIGC video workflows | [tutorials](sources/tutorials.md) |
 | **想学会数据分析** · Learn AI for data analysis | Sheets / Excel / analytics | [tutorials](sources/tutorials.md) |
+| **想学会写文案** · Learn AI copywriting | AI copywriting for social posts | [tutorials](sources/tutorials.md) |
 | **想系统学 AI** · Learn AI systematically | Official/public courses + pitfalls checklist | [learning](sources/learning.md) · [pitfalls](sources/course-pitfalls.md) |
 
 Data: [data/sources.yaml](data/sources.yaml) · Unknowns: [data/unknown-items.md](data/unknown-items.md)
@@ -238,10 +242,10 @@ Data: [data/sources.yaml](data/sources.yaml) · Unknowns: [data/unknown-items.md
 
 | Category | Count | Notes |
 | --- | ---: | --- |
-| 行业讯息 (Industry) | 8 | Chinese media accounts |
-| 产品动态 (Products) | 8 | Official X accounts (primary table) |
-| 场景教程 (Tutorials) | 15 | PPT / coding / video / data (incl. alternates) |
-| 系统学习 (Learning) | 8 | Official/public course entries |
+| 行业讯息 (Industry) | 8 | Chinese media (智东西 marked alternate) |
+| 产品动态 (Products) | 26 | Official X accounts; `x_list_url` is null pending a public list |
+| 场景教程 (Tutorials) | 17 | PPT / coding / video / data / copywriting (optional babysitter tutorials) |
+| 系统学习 (Learning) | 10 | Official courses + curator’s own accounts (sorted last) |
 
 ---
 
@@ -259,7 +263,7 @@ Awesome-AISourceHub is a **platform-grouped** Chinese source list (MIT) with sho
 
 ## Link checking
 
-Weekly GitHub Action + `scripts/check_links.py`. Soft-fail reporting; **403/429** on bot-hostile hosts (e.g. x.com, Xiaohongshu, Douyin) → **manual confirm**, not “dead”. No secrets required.
+**Monthly** GitHub Action (1st of month) + manual dispatch + `scripts/check_links.py`. Soft-fail reporting; **403/429** on bot-hostile hosts (e.g. x.com, Xiaohongshu, Douyin) → **manual confirm**, not “dead”. No secrets required.
 
 ---
 

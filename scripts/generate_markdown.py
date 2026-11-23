@@ -114,6 +114,17 @@ def write_category(doc, category: str, filename: str, intro: str):
                 lines.append(f"  - {u}")
         if s.get("url_notes"):
             lines.append(f"- **链接说明**：{s['url_notes']}")
+        if s.get("ppt_match"):
+            lines.append(f"- **PPT 对口程度**：{s['ppt_match']}")
+        tuts = s.get("tutorials") or []
+        if tuts:
+            lines.append("- **保姆教程**：")
+            for t in tuts:
+                lines.append(
+                    f"  - {t.get('title')}｜{t.get('link')}｜日期 {t.get('date')}｜赞 {t.get('likes')}｜工具 {t.get('tools')}｜{t.get('free_or_paid')}｜查询 {t.get('query_date', '')}"
+                )
+        elif s.get("category") == "场景教程":
+            lines.append("- **保姆教程**：暂无已核实条目")
         lines.append("- **数据**：")
         lines.append("")
         lines.append(fmt_data(s["数据"]))

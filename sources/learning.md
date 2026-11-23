@@ -4,13 +4,13 @@
 
 免费 / 官方课程（正表 8 个）。许多海外平台国内访问为「未知（未实测）」。选课前请先读课程避坑清单。
 
-本类共 **8** 条。
+本类共 **10** 条。
 
 ## AI For Everyone
 
 - **语言**：英（Coursera 页写 Taught in English，并写 27 languages available；这 27 种是否含中文：未知）
 - **国内能否直接访问**：未知（未实测；Coursera 与 deeplearning.ai 均非国内平台）
-- **免费/付费**：证书在 DeepLearning.AI 页写明 49 美元 / 180 天；是否仍可免费旁听全部内容，官方页表述不完全一致，不自行判断
+- **免费/付费**：证书在 DeepLearning.AI 页写明 49 美元 / 180 天；是否仍可免费旁听全部内容，官方页表述不完全一致，不自行判断。2026-11-23 补充：Coursera 官方博客写明 2025-08-08 起用「课程预览」取代旁听，免费用户可预览几乎每门课的第一个模块；完整内容需付费、免费试用或申请助学金
 - **适合谁**：非技术同事、管理者，以及想了解 AI 能做什么、不能做什么的人（课程页原文定位）
 - **查询日期**：2026-11-20
 - **链接**：
@@ -24,6 +24,7 @@
   - DeepLearning.AI 课程页标注 Updated Jul 17, 2026。Coursera 页：Beginner level，约 7 hours；4 modules。
   - DeepLearning.AI FAQ：The course costs $49 for 180 days of certificate eligibility.
   - Coursera FAQ：To access course materials, assignments, and earn a Certificate, you'll need to purchase the Certificate experience when you enroll… Some courses may also offer a Full Course, No Certificate option。本课是否仍提供后一种选项，该页没有单独写明，记为未知。
+  - 2026-11-23 补充：Coursera 官方博客（https://blog.coursera.org/introducing-courseras-new-course-preview-experience）写明，2025-08-08 宣布新的课程预览取代旁听，免费用户可预览几乎每门课的第一个模块；符合条件者仍可申请助学金。Coursera 本课页面写：To access the course materials, assignments and to earn a Certificate, you will need to purchase the Certificate experience… You can try a Free Trial instead, or apply for Financial Aid.
 
 ## Google AI Essentials Specialization
 
@@ -41,6 +42,7 @@
 - **补充**：
   - 5 course series；Beginner。页上另有「Starts Nov 20」「4 hours to complete」和正文「In under 10 hours」并存，时长不以其中之一自行取舍。
   - 官方 FAQ 原文：Is Google AI Essentials free? In the U.S. and Canada, Coursera charges $49 per month after the initial 7-day free trial period. Prices may vary in other countries. Can I take the course for free? No, you cannot take this course for free.
+  - 2026-11-23 补充：Coursera 2025-08-08 起以「课程预览」取代旁听（来源同 AI For Everyone 条目），与本条「不能免费学完」一致。
 
 ## AI-For-Beginners（12 Weeks, 24 Lessons）
 
@@ -151,3 +153,37 @@
 - **补充**：
   - 帮助中心列出的课程包括：AI Foundations（60–75 min）、Applied AI Foundations、Agents and Workflows、多门 API / Codex 课、AI Leadership、AI for Educators、AI for College Students 等。
   - 未登录打开课程目录页时显示 “No courses yet.”，因此本条课程清单以帮助中心为准，不把该列表页的空状态写成「没有课程」。
+
+## 华夏路菜菜子（整理者本人）
+
+- **语言**：中
+- **国内能否直接访问**：小红书可直接访问
+- **免费/付费**：未知
+- **适合谁**：想关注本名单整理者本人的公开分享（非优先推荐；排序靠后）
+- **查询日期**：2026-11-23
+- **链接说明**：公开可核对来源：GitHub 主页写明「小红书 / 抖音 / 视频号：@华夏路菜菜子」（https://github.com/huaxialucaicaizi）。本次未解析到可核的小红书 profile URL，链接栏留空。
+- **数据**：
+
+- **平台**：小红书
+- **账号名**：华夏路菜菜子
+- **须标明**：本名单整理者本人的账号
+- **粉丝**：未知
+- **近90天篇数**：未知
+- **口径说明**：存在性依据 GitHub 公开「找到我」字段（2026-11-23 读取）。主页粉丝与更新频率未实测，记为未知。排序不优先。
+
+## 华夏路菜菜子（整理者本人）
+
+- **语言**：中
+- **国内能否直接访问**：抖音可直接访问
+- **免费/付费**：未知
+- **适合谁**：想关注本名单整理者本人的公开分享（非优先推荐；排序靠后）
+- **查询日期**：2026-11-23
+- **链接说明**：公开可核对来源：GitHub 主页写明「小红书 / 抖音 / 视频号：@华夏路菜菜子」（https://github.com/huaxialucaicaizi）。本次未解析到可核的抖音 profile URL，链接栏留空。
+- **数据**：
+
+- **平台**：抖音
+- **账号名**：华夏路菜菜子
+- **须标明**：本名单整理者本人的账号
+- **粉丝**：未知
+- **近90天篇数**：未知
+- **口径说明**：存在性依据 GitHub 公开「找到我」字段（2026-11-23 读取）。主页粉丝与更新频率未实测，记为未知。排序不优先。

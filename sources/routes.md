@@ -10,6 +10,7 @@
 | **想学会写代码 / vibe coding** · Learn vibe coding | 零基础想用 AI 编程、做应用，看「场景教程 · vibe coding」。 | 场景教程（场景：vibe coding） | [tutorials.md](./tutorials.md) |
 | **想学会做视频 / 设计** · Learn AI video and design | 想看 AI 视频、AIGC 创作流程，看「场景教程 · 视频/设计」。 | 场景教程（场景：视频/设计） | [tutorials.md](./tutorials.md) |
 | **想学会数据分析** · Learn AI for data analysis | 想用 AI 做表格、Excel、数据分析，看「场景教程 · 数据分析」。 | 场景教程（场景：数据分析） | [tutorials.md](./tutorials.md) |
+| **想学会写文案** · Learn AI copywriting | 想用 AI 写小红书 / 短视频 / 营销文案，看「场景教程 · 写文案」。 | 场景教程（场景：写文案） | [tutorials.md](./tutorials.md) |
 | **想系统学 AI** · Learn AI systematically | 想走完整入门路径，看「系统学习」免费/官方课程，并先读课程避坑清单。 | 系统学习 | [learning.md](./learning.md) |
 
 ## 怎么用
@@ -24,6 +25,6 @@
 | 分类 | 条数 | 文件 |
 | --- | ---: | --- |
 | 行业讯息 | 8 | [industry.md](./industry.md) |
-| 产品动态 | 8 | [products.md](./products.md) |
-| 场景教程 | 15 | [tutorials.md](./tutorials.md) |
-| 系统学习 | 8 | [learning.md](./learning.md) |
+| 产品动态 | 26 | [products.md](./products.md) |
+| 场景教程 | 17 | [tutorials.md](./tutorials.md) |
+| 系统学习 | 10 | [learning.md](./learning.md) |

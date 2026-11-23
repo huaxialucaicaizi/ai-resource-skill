@@ -13,10 +13,14 @@ meta:
   - 附注中「同期查阅、未列入正表」的 X 账号不收录为本仓库信息源。
   - 数据分析 · 抖音第 3 位：未知（只找到 2 位较符合者）。
   - 用户点名但页面信息过少、不计入系统学习正表 8 个的备选 Google Skills 路径未收录为信息源。
+  - 2026-11-23 补录 18 个 X 账号（产品动态，含 4 个公司负责人复查补录），查询日期为 2026-11-23，统计窗口 2026-10-24 ~ 2026-11-23，与其余条目的
+    2026-11-20 不同。未收录：@ChatGPTapp（OpenAI 帮助中心列为官方号，但当日打开显示账号不存在）；字节 Seed（未找到确切 X 账号名）。
+  - 名单维护：计划每月复查一次（链接、免费/付费政策、账号是否仍可用）；具体字段以各条目查询日期为准。
   access_rules:
     直接可访问: 小红书、抖音、微信公众号、国家智慧教育平台可直接访问
     不能直接访问: x.com 不能直接访问，需要特殊网络环境
     未知（未实测）: Coursera、GitHub、Hugging Face、OpenAI Academy、Elements of AI、Microsoft Learn 等未在中国大陆网络实测，记为「未知（未实测）」
+  review_cadence: 每月复查一次
 routes:
 - id: follow-news
   name_zh: 想跟上行业新闻
@@ -30,6 +34,8 @@ routes:
   help_zh: 想跟官方发布与声明，看产品 / 模型动态类 X 账号（需注意国内访问限制）。
   category: 产品动态
   scene_filter: null
+  x_list_url: null
+  x_list_note: 待填入公开 X 列表链接（一键关注）；未建好前保持 null。
 - id: ppt
   name_zh: 想学会做 PPT
   name_en: Learn AI for PPT
@@ -54,6 +60,12 @@ routes:
   help_zh: 想用 AI 做表格、Excel、数据分析，看「场景教程 · 数据分析」。
   category: 场景教程
   scene_filter: 数据分析
+- id: copywriting
+  name_zh: 想学会写文案
+  name_en: Learn AI copywriting
+  help_zh: 想用 AI 写小红书 / 短视频 / 营销文案，看「场景教程 · 写文案」。
+  category: 场景教程
+  scene_filter: 写文案
 - id: systematic
   name_zh: 想系统学 AI
   name_en: Learn AI systematically
@@ -440,7 +452,9 @@ sources:
     榜单明细: []
     补充说明:
     - 公众号 ID：未知（本次未在已打开榜单里见到账号 ID）。第三方导航站有「zhidxcom」的写法，不是本次从官方页或榜单页读到的，不采用。
+    须标明: 备选。多数字段为未知；测试中 skill 可能主动跳过。字段仅保留可核观测，不估算。
   account_id: 未知（本次未在已打开榜单里见到账号 ID）
+  status: 备选
 - id: openai-x
   name: OpenAI
   category: 产品动态
@@ -605,28 +619,6 @@ sources:
     加入时间: 2024-02
   platform: X
   handle: '@Alibaba_Qwen'
-- id: samuel-douyin
-  name: 数字游牧人Samuel
-  category: 场景教程
-  语言: 中
-  国内能否直接访问: 抖音可直接访问
-  免费/付费: 作品可公开看；既有 PPT 调研中，一条 65.5万赞视频标题写「技巧都整理成文档了！【点赞+关注】即可获得」，资料是否另收费：未知
-  适合谁: 想用 AI 工具做 PPT、看短教程的职场用户（其高赞作品记录使用豆包电脑版；主页近期作品偏资讯，PPT 内容占比未知）
-  查询日期: '2026-11-20'
-  urls:
-  - https://www.douyin.com/user/MS4wLjABAAAAcBGY4RqDTLberZGiFTk-nG_L0hVwrFC7Bii_20YdBgBDGu-9JoA2L6jtkpdnpBpr
-  数据:
-    场景: 办公/PPT
-    平台: 抖音
-    是否在被推荐次数 Top 20: 否。在 from-zero 报告表 A 附注里，这个名字约在 2 条爆款的评论中出现，不计推荐次数。
-    粉丝: 109.1万
-    近90天篇数: 27（作品总数183）
-    最新发布: '2026-11-17'
-    主题: AI落地/企业AI、AI新品体验、科技公司探访（偏资讯，PPT内容占比未知）
-    口径说明: 粉丝为 2026-11-20 主页所示值。近 90 天篇数窗口 2026-08-22 ~ 2026-11-20；抖音为视频 ID 口径。既有作品页也曾记录抖音 109.0万 与 109.1万，与本次主页数字并存，不合并。
-  scene: 办公/PPT
-  platforms:
-  - 抖音
 - id: xulaoshi-ai
   name: 徐老师AI
   category: 场景教程
@@ -655,6 +647,7 @@ sources:
   platforms:
   - 小红书
   - 抖音
+  tutorials: []
 - id: sujianbai-suna
   name: 苏简白suna
   category: 场景教程
@@ -677,6 +670,32 @@ sources:
   scene: 办公/PPT
   platforms:
   - 小红书
+  tutorials: []
+- id: samuel-douyin
+  name: 数字游牧人Samuel
+  category: 场景教程
+  语言: 中
+  国内能否直接访问: 抖音可直接访问
+  免费/付费: 作品可公开看；既有 PPT 调研中，一条 65.5万赞视频标题写「技巧都整理成文档了！【点赞+关注】即可获得」，资料是否另收费：未知
+  适合谁: 想用 AI 工具做 PPT、看短教程的职场用户（其高赞作品记录使用豆包电脑版；主页近期作品偏资讯，PPT 内容占比未知）
+  查询日期: '2026-11-20'
+  urls:
+  - https://www.douyin.com/user/MS4wLjABAAAAcBGY4RqDTLberZGiFTk-nG_L0hVwrFC7Bii_20YdBgBDGu-9JoA2L6jtkpdnpBpr
+  数据:
+    场景: 办公/PPT
+    平台: 抖音
+    是否在被推荐次数 Top 20: 否。在 from-zero 报告表 A 附注里，这个名字约在 2 条爆款的评论中出现，不计推荐次数。
+    粉丝: 109.1万
+    近90天篇数: 27（作品总数183）
+    最新发布: '2026-11-17'
+    主题: AI落地/企业AI、AI新品体验、科技公司探访（偏资讯，PPT内容占比未知）
+    口径说明: 粉丝为 2026-11-20 主页所示值。近 90 天篇数窗口 2026-08-22 ~ 2026-11-20；抖音为视频 ID 口径。既有作品页也曾记录抖音 109.0万 与 109.1万，与本次主页数字并存，不合并。
+    须标明: PPT 对口程度偏弱：主页近期作品偏资讯，PPT 内容占比未知。用户问「做 PPT」时，优先同场景其他博主；本条仅作补充。
+  scene: 办公/PPT
+  platforms:
+  - 抖音
+  tutorials: []
+  ppt_match: 弱
 - id: muzibuxiedaima
   name: 木子不写代码
   category: 场景教程
@@ -706,6 +725,7 @@ sources:
   platforms:
   - 小红书
   - 抖音
+  tutorials: []
 - id: qiuzhi2046
   name: 秋芝2046
   category: 场景教程
@@ -731,6 +751,7 @@ sources:
   scene: vibe coding
   platforms:
   - 抖音
+  tutorials: []
 - id: zoieeee
   name: Zoieeee
   category: 场景教程
@@ -753,6 +774,7 @@ sources:
   scene: vibe coding
   platforms:
   - 抖音
+  tutorials: []
 - id: yingshijufeng
   name: 影视飓风
   category: 场景教程
@@ -775,6 +797,7 @@ sources:
   scene: 视频/设计
   platforms:
   - 抖音
+  tutorials: []
 - id: ksrsang
   name: Ksr桑
   category: 场景教程
@@ -797,6 +820,7 @@ sources:
   scene: 视频/设计
   platforms:
   - 抖音
+  tutorials: []
 - id: miaobisanahua
   name: 喵笔三花
   category: 场景教程
@@ -819,6 +843,7 @@ sources:
   scene: 视频/设计
   platforms:
   - 小红书
+  tutorials: []
 - id: didi-ok
   name: DiDi_OK
   category: 场景教程
@@ -849,6 +874,7 @@ sources:
   - 小红书
   - 抖音
   status: 备选
+  tutorials: []
 - id: guangyan-data
   name: 光盐｜数据自动化
   category: 场景教程
@@ -871,6 +897,7 @@ sources:
   scene: 数据分析
   platforms:
   - 小红书
+  tutorials: []
 - id: shujuhe-laoshi
   name: 数据鹤老师
   category: 场景教程
@@ -893,6 +920,7 @@ sources:
   scene: 数据分析
   platforms:
   - 小红书
+  tutorials: []
 - id: kaola-wang
   name: 数据分析师丨考拉王
   category: 场景教程
@@ -917,6 +945,7 @@ sources:
   platforms:
   - 小红书
   status: 备选
+  tutorials: []
 - id: weixiao-bangong
   name: 微笑办公
   category: 场景教程
@@ -939,6 +968,7 @@ sources:
   scene: 数据分析
   platforms:
   - 抖音
+  tutorials: []
 - id: wangxiaoer-data
   name: 王小二数据分析
   category: 场景教程
@@ -960,12 +990,469 @@ sources:
   scene: 数据分析
   platforms:
   - 抖音
+  tutorials: []
+- id: banpie-xhs
+  name: 半撇老师
+  category: 场景教程
+  语言: 中
+  国内能否直接访问: 小红书可直接访问
+  免费/付费: 作品可公开看；简介写「购课合作可私信」，是否另有付费课：未知
+  适合谁: 想用 AI 写小红书笔记、调文风、做自媒体内容工作流的中文学习者
+  查询日期: '2026-11-23'
+  urls:
+  - https://www.xiaohongshu.com/user/profile/5d2dd068000000001600f52c
+  数据:
+    场景: 写文案
+    平台: 小红书
+    小红书号: banpie01
+    简介（公开页可见）: 普通人的AI教练，香港新媒体硕士，半撇私塾创始人&数字游民，助2W+学员开启副业，购课合作可私信。
+    主题可见帖（公开检索摘要）: 我用AI实现了小红书笔记“一键直出”；零AI味洗稿！Claude Style自定义文风教程；豆包这 7 个隐藏功能；AI生成爆款封面等
+    粉丝: 未知（2026-11-23 打开主页需登录，未见当前粉丝数）。作者个人站 about 页写「小红书：1万+ 粉丝」，标注截至 2026-03，不是本次主页数字。
+    近90天篇数: 未知
+    口径说明: 账号存在性与简介、主题帖标题来自 2026-11-23 公开网页检索到的小红书主页摘要；未登录未能读取主页粉丝与完整笔记列表。
+  scene: 写文案
+  platforms:
+  - 小红书
+  tutorials: []
+- id: zhangyuncai-douyin
+  name: 张蕴采
+  category: 场景教程
+  语言: 中
+  国内能否直接访问: 抖音可直接访问
+  免费/付费: 作品可公开看；是否另有付费：未知
+  适合谁: 想看「用 AI 写有深度的爆款文案」类短视频教程的中文学习者（主页同时有国学/自媒体内容，AI 文案不是唯一主题）
+  查询日期: '2026-11-23'
+  urls:
+  - https://www.douyin.com/user/MS4wLjABAAAAccw_6pHbTgGLOFXtLh2vNTeXPtTS6vGPiTjyDvjJaAv4HAmMkaqvS3k1aZL7ret0
+  数据:
+    场景: 写文案
+    平台: 抖音
+    抖音号: Yuncai_114
+    简介（公开页可见）: 【华夏文化研习者】 传统文化 · 现代商业践行者 经典解读｜
+    粉丝: 90.0万（2026-11-23 公开检索到的抖音主页摘要所示）
+    作品数: 200（同上主页摘要）
+    最新发布: 2026-05-20（主页摘要「最新作品发布时间」）
+    IP属地: 重庆（主页摘要）
+    口径说明: 粉丝、作品数、抖音号、简介来自 2026-11-23 公开网页检索到的抖音主页摘要；机器人打开主页未解析出结构化字段，以检索摘要为准，不估算。
+  scene: 写文案
+  platforms:
+  - 抖音
+  tutorials:
+  - title: 教你怎么用AI写出有深度的爆款文案
+    link: https://www.douyin.com/video/7641911668615826734
+    date: '2026-05-20'
+    likes: 442（主页作品列表摘要所示；西瓜视频镜像页亦收录同名内容）
+    tools: 未知（标题未点名具体工具）
+    free_or_paid: 作品可公开看；是否另有付费资料：未知
+    query_date: '2026-11-23'
+- id: meta-x
+  name: AI at Meta
+  category: 产品动态
+  语言: 英
+  国内能否直接访问: x.com 不能直接访问，需要特殊网络环境
+  免费/付费: 公开帖可免费浏览（本次未登录，仅能看到公开资料页）
+  适合谁: 需要跟 Meta AI 官方模型发布的读者
+  查询日期: '2026-11-23'
+  urls:
+  - https://x.com/AIatMeta
+  数据:
+    账号: '@AIatMeta'
+    显示名: AI at Meta
+    认证徽章: 未知（本次未核对）
+    当前职位/简介: 官方号 "We're building the future of personal superintelligence to help people create, connect,
+      and achieve more in life."
+    粉丝数: 887.6K
+    近30天帖数: 4 条（11/20、11/19、11/9、11/6），最早 11/6，partial；转帖 未知
+    加入时间: 2018-08
+    口径说明: 统计窗口 2026-10-24 ~ 2026-11-23；近30天发帖数为未登录公开视图可见条目（不含置顶），partial 表示为下限；转帖数未知；认证徽章本次未核对
+  platform: X
+  handle: '@AIatMeta'
+- id: xai-x
+  name: SpaceX Super Intelligence（原 xAI）
+  category: 产品动态
+  语言: 英
+  国内能否直接访问: x.com 不能直接访问，需要特殊网络环境
+  免费/付费: 公开帖可免费浏览（本次未登录，仅能看到公开资料页）
+  适合谁: 需要跟 Grok 系列模型和产品发布的读者
+  查询日期: '2026-11-23'
+  urls:
+  - https://x.com/SpaceXSI
+  数据:
+    账号: '@SpaceXSI'
+    显示名: SpaceX Super Intelligence（原 xAI）
+    认证徽章: 未知（本次未核对）
+    当前职位/简介: 官方号，简介仅写 x.ai
+    粉丝数: 2M
+    近30天帖数: 1 条（11/11），完整（下一条 10/22）；转帖 未知
+    加入时间: 2023-05
+    口径说明: 统计窗口 2026-10-24 ~ 2026-11-23；近30天发帖数为未登录公开视图可见条目（不含置顶），partial 表示为下限；转帖数未知；认证徽章本次未核对
+    补充说明:
+    - 打开 x.com/xai 会跳转到 @SpaceXSI，显示名为 SpaceX Super Intelligence；另显示 738 Affiliates
+  platform: X
+  handle: '@SpaceXSI'
+- id: mistral-x
+  name: Mistral AI
+  category: 产品动态
+  语言: 英
+  国内能否直接访问: x.com 不能直接访问，需要特殊网络环境
+  免费/付费: 公开帖可免费浏览（本次未登录，仅能看到公开资料页）
+  适合谁: 需要跟 Mistral 官方模型发布（含开源权重）的读者
+  查询日期: '2026-11-23'
+  urls:
+  - https://x.com/MistralAI
+  数据:
+    账号: '@MistralAI'
+    显示名: Mistral AI
+    认证徽章: 未知（本次未核对）
+    当前职位/简介: 官方号 "Frontier AI in your hands. Get work done with @MistralVibe at mistr.al/vibe."
+    粉丝数: 233.1K
+    近30天帖数: 5 条（11/19×2、11/18、11/17×2），最早 11/17，partial；转帖 未知
+    加入时间: 2023-06
+    口径说明: 统计窗口 2026-10-24 ~ 2026-11-23；近30天发帖数为未登录公开视图可见条目（不含置顶），partial 表示为下限；转帖数未知；认证徽章本次未核对
+  platform: X
+  handle: '@MistralAI'
+- id: huggingface-x
+  name: Hugging Face
+  category: 产品动态
+  语言: 英
+  国内能否直接访问: x.com 不能直接访问，需要特殊网络环境
+  免费/付费: 公开帖可免费浏览（本次未登录，仅能看到公开资料页）
+  适合谁: 需要跟开源模型、开源工具动态的读者
+  查询日期: '2026-11-23'
+  urls:
+  - https://x.com/huggingface
+  数据:
+    账号: '@huggingface'
+    显示名: Hugging Face
+    认证徽章: 未知（本次未核对）
+    当前职位/简介: 官方号 "The AI community building the future. hf.co/careers"
+    粉丝数: 853.8K
+    近30天帖数: 5 条（11/16、11/10、11/6、11/5×2），最早 11/5，partial；转帖 未知
+    加入时间: 2016-09
+    口径说明: 统计窗口 2026-10-24 ~ 2026-11-23；近30天发帖数为未登录公开视图可见条目（不含置顶），partial 表示为下限；转帖数未知；认证徽章本次未核对
+  platform: X
+  handle: '@huggingface'
+- id: perplexity-x
+  name: Perplexity
+  category: 产品动态
+  语言: 英
+  国内能否直接访问: x.com 不能直接访问，需要特殊网络环境
+  免费/付费: 公开帖可免费浏览（本次未登录，仅能看到公开资料页）
+  适合谁: 需要跟 Perplexity 产品发布的读者
+  查询日期: '2026-11-23'
+  urls:
+  - https://x.com/perplexity_ai
+  数据:
+    账号: '@perplexity_ai'
+    显示名: Perplexity
+    认证徽章: 未知（本次未核对）
+    当前职位/简介: 官方号 "Curiosity changes everything. Download our free app on iOS, Mac, Windows, and Android."
+    粉丝数: 513.9K
+    近30天帖数: 4 条（11/20、11/19×2、11/18），最早 11/18，partial；转帖 未知
+    加入时间: 2022-12
+    口径说明: 统计窗口 2026-10-24 ~ 2026-11-23；近30天发帖数为未登录公开视图可见条目（不含置顶），partial 表示为下限；转帖数未知；认证徽章本次未核对
+    补充说明:
+    - 另显示 57 Affiliates
+  platform: X
+  handle: '@perplexity_ai'
+- id: kimi-x
+  name: Kimi.ai
+  category: 产品动态
+  语言: 英
+  国内能否直接访问: x.com 不能直接访问，需要特殊网络环境
+  免费/付费: 公开帖可免费浏览（本次未登录，仅能看到公开资料页）
+  适合谁: 需要跟 Kimi（月之暗面）官方模型和产品发布的读者
+  查询日期: '2026-11-23'
+  urls:
+  - https://x.com/Kimi_Moonshot
+  数据:
+    账号: '@Kimi_Moonshot'
+    显示名: Kimi.ai
+    认证徽章: 未知（本次未核对）
+    当前职位/简介: 官方号 "Built by Moonshot AI to empower everyone to be superhuman."
+    粉丝数: 395.5K
+    近30天帖数: 4 条（11/4、10/29×2、10/25），最早 10/25，partial；转帖 未知
+    加入时间: 2024-12
+    口径说明: 统计窗口 2026-10-24 ~ 2026-11-23；近30天发帖数为未登录公开视图可见条目（不含置顶），partial 表示为下限；转帖数未知；认证徽章本次未核对
+    补充说明:
+    - 另显示 3 Affiliates
+  platform: X
+  handle: '@Kimi_Moonshot'
+- id: zai-x
+  name: Z.ai（智谱）
+  category: 产品动态
+  语言: 英
+  国内能否直接访问: x.com 不能直接访问，需要特殊网络环境
+  免费/付费: 公开帖可免费浏览（本次未登录，仅能看到公开资料页）
+  适合谁: 需要跟智谱 GLM 系列模型发布的读者
+  查询日期: '2026-11-23'
+  urls:
+  - https://x.com/Zai_org
+  数据:
+    账号: '@Zai_org'
+    显示名: Z.ai（智谱）
+    认证徽章: 未知（本次未核对）
+    当前职位/简介: 官方号 "The AI Lab behind GLM models, dedicated to inspiring the development of AGI to benefit
+      humanity."
+    粉丝数: 171.5K
+    近30天帖数: 1 条（11/23），完整（下一条 10/12）；转帖 未知
+    加入时间: 2023-11
+    口径说明: 统计窗口 2026-10-24 ~ 2026-11-23；近30天发帖数为未登录公开视图可见条目（不含置顶），partial 表示为下限；转帖数未知；认证徽章本次未核对
+    补充说明:
+    - 另显示 12 Affiliates
+  platform: X
+  handle: '@Zai_org'
+- id: minimax-x
+  name: MiniMax (official)
+  category: 产品动态
+  语言: 英
+  国内能否直接访问: x.com 不能直接访问，需要特殊网络环境
+  免费/付费: 公开帖可免费浏览（本次未登录，仅能看到公开资料页）
+  适合谁: 需要跟 MiniMax 官方模型发布的读者
+  查询日期: '2026-11-23'
+  urls:
+  - https://x.com/MiniMax_AI
+  数据:
+    账号: '@MiniMax_AI'
+    显示名: MiniMax (official)
+    认证徽章: 未知（本次未核对）
+    当前职位/简介: '官方号，简介列出 Code: @MiniMax_Code、MiniMax Design: @Hailuo_AI 等子账号'
+    粉丝数: 132.4K
+    近30天帖数: 未知（本次页面帖子列表未加载）
+    加入时间: 2025-01
+    口径说明: 统计窗口 2026-10-24 ~ 2026-11-23；近30天发帖数为未登录公开视图可见条目（不含置顶），partial 表示为下限；转帖数未知；认证徽章本次未核对
+    补充说明:
+    - x.com/MiniMax__AI（双下划线）显示账号不存在；本条为 x.com/minimax_ai
+  platform: X
+  handle: '@MiniMax_AI'
+- id: claude-x
+  name: Claude
+  category: 产品动态
+  语言: 英
+  国内能否直接访问: x.com 不能直接访问，需要特殊网络环境
+  免费/付费: 公开帖可免费浏览（本次未登录，仅能看到公开资料页）
+  适合谁: 需要跟 Claude 产品功能更新的读者
+  查询日期: '2026-11-23'
+  urls:
+  - https://x.com/claudeai
+  数据:
+    账号: '@claudeai'
+    显示名: Claude
+    认证徽章: 未知（本次未核对）
+    当前职位/简介: 产品号 "Claude is an AI assistant built by @anthropicai to be safe, accurate, and secure. Talk
+      to Claude on claude.ai or download the app."
+    粉丝数: 2.1M
+    近30天帖数: 5 条（11/19、11/12、11/11、11/10×2），最早 11/10，partial；转帖 未知
+    加入时间: 2025-07（页面所示）
+    口径说明: 统计窗口 2026-10-24 ~ 2026-11-23；近30天发帖数为未登录公开视图可见条目（不含置顶），partial 表示为下限；转帖数未知；认证徽章本次未核对
+  platform: X
+  handle: '@claudeai'
+- id: gemini-x
+  name: Google Gemini
+  category: 产品动态
+  语言: 英
+  国内能否直接访问: x.com 不能直接访问，需要特殊网络环境
+  免费/付费: 公开帖可免费浏览（本次未登录，仅能看到公开资料页）
+  适合谁: 需要跟 Gemini 应用功能和模型上线的读者
+  查询日期: '2026-11-23'
+  urls:
+  - https://x.com/GeminiApp
+  数据:
+    账号: '@GeminiApp'
+    显示名: Google Gemini
+    认证徽章: 未知（本次未核对）
+    当前职位/简介: 产品号 "The Gemini app turns research into reality, bringing frontier AI experiences like Omni,
+      Nano Banana, and more to over a billion people."
+    粉丝数: 629.1K
+    近30天帖数: 4 条（11/20、11/19×2、11/18），最早 11/18，partial；转帖 未知
+    加入时间: 2024-06
+    口径说明: 统计窗口 2026-10-24 ~ 2026-11-23；近30天发帖数为未登录公开视图可见条目（不含置顶），partial 表示为下限；转帖数未知；认证徽章本次未核对
+  platform: X
+  handle: '@GeminiApp'
+- id: cursor-x
+  name: Cursor
+  category: 产品动态
+  语言: 英
+  国内能否直接访问: x.com 不能直接访问，需要特殊网络环境
+  免费/付费: 公开帖可免费浏览（本次未登录，仅能看到公开资料页）
+  适合谁: 需要跟 AI 编程工具 Cursor 更新的读者
+  查询日期: '2026-11-23'
+  urls:
+  - https://x.com/cursor_ai
+  数据:
+    账号: '@cursor_ai'
+    显示名: Cursor
+    认证徽章: 未知（本次未核对）
+    当前职位/简介: 产品号 "Coding agent for building ambitious software"
+    粉丝数: 502.5K
+    近30天帖数: 4 条（11/18、11/13、11/12、11/10），最早 11/10，partial；转帖 未知
+    加入时间: 2023-08
+    口径说明: 统计窗口 2026-10-24 ~ 2026-11-23；近30天发帖数为未登录公开视图可见条目（不含置顶），partial 表示为下限；转帖数未知；认证徽章本次未核对
+    补充说明:
+    - 置顶帖（8/14）写明 Cursor 已被 SpaceX 收购
+  platform: X
+  handle: '@cursor_ai'
+- id: mensch-x
+  name: Arthur Mensch
+  category: 产品动态
+  语言: 英
+  国内能否直接访问: x.com 不能直接访问，需要特殊网络环境
+  免费/付费: 公开帖可免费浏览（本次未登录，仅能看到公开资料页）
+  适合谁: 需要跟 Mistral CEO 公开帖文的读者
+  查询日期: '2026-11-23'
+  urls:
+  - https://x.com/arthurmensch
+  数据:
+    账号: '@arthurmensch'
+    显示名: Arthur Mensch
+    认证徽章: 未知（本次未核对）
+    当前职位/简介: '"Co-founder and CEO @MistralAI"'
+    粉丝数: 93.2K
+    近30天帖数: 4 条（11/20、11/13、11/8、10/29），最早 10/29，partial；转帖 未知
+    加入时间: 2009-06
+    口径说明: 统计窗口 2026-10-24 ~ 2026-11-23；近30天发帖数为未登录公开视图可见条目（不含置顶），partial 表示为下限；转帖数未知；认证徽章本次未核对
+  platform: X
+  handle: '@arthurmensch'
+- id: aravind-x
+  name: Aravind Srinivas
+  category: 产品动态
+  语言: 英
+  国内能否直接访问: x.com 不能直接访问，需要特殊网络环境
+  免费/付费: 公开帖可免费浏览（本次未登录，仅能看到公开资料页）
+  适合谁: 需要跟 Perplexity CEO 公开帖文的读者
+  查询日期: '2026-11-23'
+  urls:
+  - https://x.com/AravSrinivas
+  数据:
+    账号: '@AravSrinivas'
+    显示名: Aravind Srinivas
+    认证徽章: 未知（本次未核对）
+    当前职位/简介: '"cofounder and ceo @perplexity_ai"'
+    粉丝数: 1.1M
+    近30天帖数: 4 条（11/23、11/22、11/21×2），最早 11/21，partial（发帖频繁，可见部分只覆盖数天）；转帖 未知
+    加入时间: 2016-07
+    口径说明: 统计窗口 2026-10-24 ~ 2026-11-23；近30天发帖数为未登录公开视图可见条目（不含置顶），partial 表示为下限；转帖数未知；认证徽章本次未核对
+  platform: X
+  handle: '@AravSrinivas'
+- id: clem-x
+  name: Clem Delangue
+  category: 产品动态
+  语言: 英
+  国内能否直接访问: x.com 不能直接访问，需要特殊网络环境
+  免费/付费: 公开帖可免费浏览（本次未登录，仅能看到公开资料页）
+  适合谁: 需要跟 Hugging Face CEO 公开帖文、开源 AI 动态的读者
+  查询日期: '2026-11-23'
+  urls:
+  - https://x.com/ClementDelangue
+  数据:
+    账号: '@ClementDelangue'
+    显示名: Clem Delangue
+    认证徽章: 未知（本次未核对）
+    当前职位/简介: '"Co-founder & CEO @HuggingFace 🤗, the open and collaborative platform for AI builders"'
+    粉丝数: 736K
+    近30天帖数: 5 条（11/21×2、11/20×3），最早 11/20，partial；转帖 未知
+    加入时间: 2010-09
+    口径说明: 统计窗口 2026-10-24 ~ 2026-11-23；近30天发帖数为未登录公开视图可见条目（不含置顶），partial 表示为下限；转帖数未知；认证徽章本次未核对
+    补充说明:
+    - 显示名为 clem 🤗
+  platform: X
+  handle: '@ClementDelangue'
+- id: zuck-x
+  name: Mark Zuckerberg
+  category: 产品动态
+  语言: 英
+  国内能否直接访问: x.com 不能直接访问，需要特殊网络环境
+  免费/付费: 公开帖可免费浏览（本次未登录，仅能看到公开资料页）
+  适合谁: 需要跟 Meta CEO 公开帖文（近期多为 Muse 系列模型发布）的读者
+  查询日期: '2026-11-23'
+  urls:
+  - https://x.com/finkd
+  数据:
+    账号: '@finkd'
+    显示名: Mark Zuckerberg
+    认证徽章: 未知（本次未核对）
+    当前职位/简介: 简介为空（bio 未写职称）
+    粉丝数: 2.5M
+    近30天帖数: 5 条（11/20、11/17、11/9×2、11/6），最早 11/6，partial；转帖 未知
+    加入时间: 2009-02
+    口径说明: 统计窗口 2026-10-24 ~ 2026-11-23；近30天发帖数为未登录公开视图可见条目（不含置顶），partial 表示为下限；转帖数未知；认证徽章本次未核对
+  platform: X
+  handle: '@finkd'
+- id: alexwang-x
+  name: Alexandr Wang
+  category: 产品动态
+  语言: 英
+  国内能否直接访问: x.com 不能直接访问，需要特殊网络环境
+  免费/付费: 公开帖可免费浏览（本次未登录，仅能看到公开资料页）
+  适合谁: 需要跟 Meta 首席 AI 官公开帖文的读者
+  查询日期: '2026-11-23'
+  urls:
+  - https://x.com/alexandr_wang
+  数据:
+    账号: '@alexandr_wang'
+    显示名: Alexandr Wang
+    认证徽章: 未知（本次未核对）
+    当前职位/简介: '"chief ai officer @meta, founder meta superintelligence labs, founder @scale_ai. give everyone
+      the adulthood they dreamed of in childhood"'
+    粉丝数: 898.7K
+    近30天帖数: 4 条（11/23×2、11/21、11/20），最早 11/20，partial；转帖 未知
+    加入时间: 2012-06
+    口径说明: 统计窗口 2026-10-24 ~ 2026-11-23；近30天发帖数为未登录公开视图可见条目（不含置顶），partial 表示为下限；转帖数未知；认证徽章本次未核对
+  platform: X
+  handle: '@alexandr_wang'
+- id: truell-x
+  name: Michael Truell
+  category: 产品动态
+  语言: 英
+  国内能否直接访问: x.com 不能直接访问，需要特殊网络环境
+  免费/付费: 公开帖可免费浏览（本次未登录，仅能看到公开资料页）
+  适合谁: 需要跟 Cursor 联合创始人公开帖文的读者
+  查询日期: '2026-11-23'
+  urls:
+  - https://x.com/mntruell
+  数据:
+    账号: '@mntruell'
+    显示名: Michael Truell
+    认证徽章: 未知（本次未核对）
+    当前职位/简介: '"AI Products @SpaceXSI"（bio 未写 Cursor CEO 职称）'
+    粉丝数: 234.9K
+    近30天帖数: 5 条（11/13×2、11/12、11/11、11/4），最早 11/4，partial；转帖 未知
+    加入时间: 2014-08
+    口径说明: 统计窗口 2026-10-24 ~ 2026-11-23；近30天发帖数为未登录公开视图可见条目（不含置顶），partial 表示为下限；转帖数未知；认证徽章本次未核对
+    补充说明:
+    - 近期帖文多为转发 Grok Bot 更新
+  platform: X
+  handle: '@mntruell'
+- id: musk-x
+  name: Elon Musk
+  category: 产品动态
+  语言: 英
+  国内能否直接访问: x.com 不能直接访问，需要特殊网络环境
+  免费/付费: 公开帖可免费浏览（本次未登录，仅能看到公开资料页）
+  适合谁: 需要跟 xAI / Grok 所属公司负责人公开帖文的读者。须标明：其帖文大量与 AI 无关
+  查询日期: '2026-11-23'
+  urls:
+  - https://x.com/elonmusk
+  数据:
+    账号: '@elonmusk'
+    显示名: Elon Musk
+    认证徽章: 未知（本次未核对）
+    当前职位/简介: 简介仅写 Terafab.AI
+    粉丝数: 240.1M
+    近30天帖数: 可见非置顶帖均在 11/22–11/23 之间，partial（发帖极频繁，未登录可见部分只覆盖不到一天）；转帖 未知
+    加入时间: 2009-06
+    口径说明: 统计窗口 2026-10-24 ~ 2026-11-23；近30天发帖数为未登录公开视图可见条目（不含置顶），partial 表示为下限；转帖数未知；认证徽章本次未核对
+    补充说明:
+    - 总帖数 112.7K
+  platform: X
+  handle: '@elonmusk'
 - id: ai-for-everyone
   name: AI For Everyone
   category: 系统学习
   语言: 英（Coursera 页写 Taught in English，并写 27 languages available；这 27 种是否含中文：未知）
   国内能否直接访问: 未知（未实测；Coursera 与 deeplearning.ai 均非国内平台）
-  免费/付费: 证书在 DeepLearning.AI 页写明 49 美元 / 180 天；是否仍可免费旁听全部内容，官方页表述不完全一致，不自行判断
+  免费/付费: 证书在 DeepLearning.AI 页写明 49 美元 / 180 天；是否仍可免费旁听全部内容，官方页表述不完全一致，不自行判断。2026-11-23 补充：Coursera 官方博客写明
+    2025-08-08 起用「课程预览」取代旁听，免费用户可预览几乎每门课的第一个模块；完整内容需付费、免费试用或申请助学金
   适合谁: 非技术同事、管理者，以及想了解 AI 能做什么、不能做什么的人（课程页原文定位）
   查询日期: '2026-11-20'
   urls:
@@ -980,6 +1467,10 @@ sources:
     - Coursera FAQ：To access course materials, assignments, and earn a Certificate, you'll need to purchase
       the Certificate experience when you enroll… Some courses may also offer a Full Course, No Certificate
       option。本课是否仍提供后一种选项，该页没有单独写明，记为未知。
+    - 2026-11-23 补充：Coursera 官方博客（https://blog.coursera.org/introducing-courseras-new-course-preview-experience）写明，2025-08-08
+      宣布新的课程预览取代旁听，免费用户可预览几乎每门课的第一个模块；符合条件者仍可申请助学金。Coursera 本课页面写：To access the course materials, assignments
+      and to earn a Certificate, you will need to purchase the Certificate experience… You can try a Free
+      Trial instead, or apply for Financial Aid.
 - id: google-ai-essentials
   name: Google AI Essentials Specialization
   category: 系统学习
@@ -999,6 +1490,7 @@ sources:
     - 官方 FAQ 原文：Is Google AI Essentials free? In the U.S. and Canada, Coursera charges $49 per month after
       the initial 7-day free trial period. Prices may vary in other countries. Can I take the course for
       free? No, you cannot take this course for free.
+    - 2026-11-23 补充：Coursera 2025-08-08 起以「课程预览」取代旁听（来源同 AI For Everyone 条目），与本条「不能免费学完」一致。
 - id: ai-for-beginners-ms
   name: AI-For-Beginners（12 Weeks, 24 Lessons）
   category: 系统学习
@@ -1108,3 +1600,43 @@ sources:
     - 帮助中心列出的课程包括：AI Foundations（60–75 min）、Applied AI Foundations、Agents and Workflows、多门 API / Codex
       课、AI Leadership、AI for Educators、AI for College Students 等。
     - 未登录打开课程目录页时显示 “No courses yet.”，因此本条课程清单以帮助中心为准，不把该列表页的空状态写成「没有课程」。
+- id: huaxia-lucaicaizi-xhs
+  name: 华夏路菜菜子
+  category: 系统学习
+  语言: 中
+  国内能否直接访问: 小红书可直接访问
+  免费/付费: 未知
+  适合谁: 想关注本名单整理者本人的公开分享（非优先推荐；排序靠后）
+  查询日期: '2026-11-23'
+  urls: []
+  url_notes: 公开可核对来源：GitHub 主页写明「小红书 / 抖音 / 视频号：@华夏路菜菜子」（https://github.com/huaxialucaicaizi）。本次未解析到可核的小红书
+    profile URL，链接栏留空。
+  数据:
+    平台: 小红书
+    账号名: 华夏路菜菜子
+    须标明: 本名单整理者本人的账号
+    粉丝: 未知
+    近90天篇数: 未知
+    口径说明: 存在性依据 GitHub 公开「找到我」字段（2026-11-23 读取）。主页粉丝与更新频率未实测，记为未知。排序不优先。
+  status: 整理者本人
+  tutorials: []
+- id: huaxia-lucaicaizi-douyin
+  name: 华夏路菜菜子
+  category: 系统学习
+  语言: 中
+  国内能否直接访问: 抖音可直接访问
+  免费/付费: 未知
+  适合谁: 想关注本名单整理者本人的公开分享（非优先推荐；排序靠后）
+  查询日期: '2026-11-23'
+  urls: []
+  url_notes: 公开可核对来源：GitHub 主页写明「小红书 / 抖音 / 视频号：@华夏路菜菜子」（https://github.com/huaxialucaicaizi）。本次未解析到可核的抖音
+    profile URL，链接栏留空。
+  数据:
+    平台: 抖音
+    账号名: 华夏路菜菜子
+    须标明: 本名单整理者本人的账号
+    粉丝: 未知
+    近90天篇数: 未知
+    口径说明: 存在性依据 GitHub 公开「找到我」字段（2026-11-23 读取）。主页粉丝与更新频率未实测，记为未知。排序不优先。
+  status: 整理者本人
+  tutorials: []
