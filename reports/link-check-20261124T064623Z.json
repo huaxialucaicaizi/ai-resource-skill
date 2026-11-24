@@ -1,0 +1,620 @@
+{
+  "summary": {
+    "checked_at": "2026-11-24T06:46:23.708865+00:00",
+    "total": 87,
+    "ok": 86,
+    "blocked": 1,
+    "dead": 0
+  },
+  "results": [
+    {
+      "url": "https://aiera.com.cn/",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "xinzhiyuan"
+    },
+    {
+      "url": "http://data.xiguaji.com/bizrank/technology/5/30/20261001.html",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "xinzhiyuan"
+    },
+    {
+      "url": "http://data.xiguaji.com/bizrank/technology/5/30/20260901.html",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "xinzhiyuan"
+    },
+    {
+      "url": "https://data.xiguaji.com/bizrank/technology/5/30/20260301.html",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "xinzhiyuan"
+    },
+    {
+      "url": "http://data.xiguaji.com/OriginalRank/5/1/20261018.html",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "xinzhiyuan"
+    },
+    {
+      "url": "http://data.xiguaji.com/bizrank/technology/5/1/20261004.html",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "xinzhiyuan"
+    },
+    {
+      "url": "https://www.jiqizhixin.com/",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "jiqizhixin"
+    },
+    {
+      "url": "http://data.xiguaji.com/OriginalRank/5/1/20260919.html",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "jiqizhixin"
+    },
+    {
+      "url": "http://data.xiguaji.com/bizrank/technology/5/1/20261012.html",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "jiqizhixin"
+    },
+    {
+      "url": "http://data.xiguaji.com/bizrank/technology/5/1/20260627.html",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "jiqizhixin"
+    },
+    {
+      "url": "https://www.qbitai.com/",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "qbitai"
+    },
+    {
+      "url": "http://data.xiguaji.com/bizrank/technology/5/1/20261105.html",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "qbitai"
+    },
+    {
+      "url": "https://36kr.com/",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "36kr"
+    },
+    {
+      "url": "http://data.xiguaji.com/bizrank/technology/5/7/20261108.html",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "36kr"
+    },
+    {
+      "url": "http://data.xiguaji.com/bizrank/technology/5/7/20261101.html",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "36kr"
+    },
+    {
+      "url": "http://data.xiguaji.com/bizrank/technology/5/7/20261025.html",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "36kr"
+    },
+    {
+      "url": "http://data.xiguaji.com/bizrank/tech/27/30/20261001.html",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "appso"
+    },
+    {
+      "url": "http://data.xiguaji.com/bizrank/tech/27/30/20260801.html",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "appso"
+    },
+    {
+      "url": "http://data.xiguaji.com/bizrank/tech/27/1/20261111.html",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "appso"
+    },
+    {
+      "url": "https://www.leiphone.com/",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "leiphone"
+    },
+    {
+      "url": "http://data.xiguaji.com/OriginalRank/5/7/20260927.html",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "leiphone"
+    },
+    {
+      "url": "http://data.xiguaji.com/bizrank/technology/5/1/20261112.html",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "leiphone"
+    },
+    {
+      "url": "https://www.geekpark.net/",
+      "status": "需人工确认",
+      "http_status": 403,
+      "detail": "HTTP 403/429 — treat as manual confirm, not dead",
+      "source_id": "geekpark"
+    },
+    {
+      "url": "https://zhidx.com/",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "zhidx"
+    },
+    {
+      "url": "https://x.com/OpenAI",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "openai-x"
+    },
+    {
+      "url": "https://x.com/sama",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "sama-x"
+    },
+    {
+      "url": "https://x.com/AnthropicAI",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "anthropic-x"
+    },
+    {
+      "url": "https://x.com/DarioAmodei",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "dario-x"
+    },
+    {
+      "url": "https://x.com/GoogleDeepMind",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "deepmind-x"
+    },
+    {
+      "url": "https://x.com/demishassabis",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "demis-x"
+    },
+    {
+      "url": "https://x.com/deepseek_ai",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "deepseek-x"
+    },
+    {
+      "url": "https://x.com/Alibaba_Qwen",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "qwen-x"
+    },
+    {
+      "url": "https://www.xiaohongshu.com/user/profile/66f59238000000001d030d56",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "xulaoshi-ai"
+    },
+    {
+      "url": "https://www.douyin.com/user/MS4wLjABAAAAJNts8oZ5FOMjrt5nXGQVcw47VcJvq29Pnvn9kjcODs0pkWQPLwz1CyNULDlvnlHK",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "xulaoshi-ai"
+    },
+    {
+      "url": "https://www.xiaohongshu.com/user/profile/63247336000000002303bb1d",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "sujianbai-suna"
+    },
+    {
+      "url": "https://www.douyin.com/user/MS4wLjABAAAAcBGY4RqDTLberZGiFTk-nG_L0hVwrFC7Bii_20YdBgBDGu-9JoA2L6jtkpdnpBpr",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "samuel-douyin"
+    },
+    {
+      "url": "https://www.xiaohongshu.com/user/profile/62972c5f00000000210299fd",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "muzibuxiedaima"
+    },
+    {
+      "url": "https://www.douyin.com/user/MS4wLjABAAAAy_5W-LNi-cp7QbySyzEm3PskTDnDMUF34XijUKmZvywSej4Pm4UtLhQHiY_7Fryj",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "muzibuxiedaima"
+    },
+    {
+      "url": "https://www.douyin.com/user/MS4wLjABAAAAwbbVuf1W2DdgRe0xCa0oxg1ZIHbzuiTzyjq3NcOVgBuu6qIidYlMYqbL3ZFY2swu",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "qiuzhi2046"
+    },
+    {
+      "url": "https://www.douyin.com/user/MS4wLjABAAAA6MiRGlime0jxOOwU4sOjZbnPtznJb7ePL9f8orDdTVA0_s7c_sZ406hMz9R1zuFE",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "zoieeee"
+    },
+    {
+      "url": "https://www.douyin.com/user/MS4wLjABAAAAaCcBHb3Rhc4zxF8YkBOfHfLh6k-IWEK2l3Ne9xOXPnQ",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "yingshijufeng"
+    },
+    {
+      "url": "https://www.douyin.com/user/MS4wLjABAAAAHh0RHAYS48V5XTWWRRKDqFZB8n8L4PcFoN6r9jmt3tMj-wN1i2z9QgEz2Dm1bqGY",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "ksrsang"
+    },
+    {
+      "url": "https://www.xiaohongshu.com/user/profile/6721b042000000001d02c947",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "miaobisanahua"
+    },
+    {
+      "url": "https://www.xiaohongshu.com/user/profile/5fc8dacd0000000001002408",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "didi-ok"
+    },
+    {
+      "url": "https://www.douyin.com/user/MS4wLjABAAAAO3DCIeUazKJrMXphUhFfgkvksgw3QYh9iA00yFpm8_U",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "didi-ok"
+    },
+    {
+      "url": "https://www.xiaohongshu.com/user/profile/69cd1c3000000000330178d2",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "guangyan-data"
+    },
+    {
+      "url": "https://www.xiaohongshu.com/user/profile/6229cc03000000001000bb60",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "shujuhe-laoshi"
+    },
+    {
+      "url": "https://www.xiaohongshu.com/user/profile/65d6bc16000000001700780e",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "kaola-wang"
+    },
+    {
+      "url": "https://www.douyin.com/user/MS4wLjABAAAAd9F0YTDpiF2a7_hU3ukXL7ytpRVVm09EwqZ6xvY1GohGfJTQqTGCIVl-z6zhxtou",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "weixiao-bangong"
+    },
+    {
+      "url": "https://www.douyin.com/user/MS4wLjABAAAA0ITSyg9jKeT1x5pIF0G7W8547uslYxzsK_IQJQ_UAxGkRHOqAuiLyiVJLtcCEzT3",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "wangxiaoer-data"
+    },
+    {
+      "url": "https://x.com/AIatMeta",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "meta-x"
+    },
+    {
+      "url": "https://x.com/SpaceXSI",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "xai-x"
+    },
+    {
+      "url": "https://x.com/MistralAI",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "mistral-x"
+    },
+    {
+      "url": "https://x.com/huggingface",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "huggingface-x"
+    },
+    {
+      "url": "https://x.com/perplexity_ai",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "perplexity-x"
+    },
+    {
+      "url": "https://x.com/Kimi_Moonshot",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "kimi-x"
+    },
+    {
+      "url": "https://x.com/Zai_org",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "zai-x"
+    },
+    {
+      "url": "https://x.com/MiniMax_AI",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "minimax-x"
+    },
+    {
+      "url": "https://x.com/claudeai",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "claude-x"
+    },
+    {
+      "url": "https://x.com/GeminiApp",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "gemini-x"
+    },
+    {
+      "url": "https://x.com/cursor_ai",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "cursor-x"
+    },
+    {
+      "url": "https://x.com/arthurmensch",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "mensch-x"
+    },
+    {
+      "url": "https://x.com/AravSrinivas",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "aravind-x"
+    },
+    {
+      "url": "https://x.com/ClementDelangue",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "clem-x"
+    },
+    {
+      "url": "https://x.com/finkd",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "zuck-x"
+    },
+    {
+      "url": "https://x.com/alexandr_wang",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "alexwang-x"
+    },
+    {
+      "url": "https://x.com/mntruell",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "truell-x"
+    },
+    {
+      "url": "https://x.com/elonmusk",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "musk-x"
+    },
+    {
+      "url": "https://www.xiaohongshu.com/user/profile/5d2dd068000000001600f52c",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "banpie-xhs"
+    },
+    {
+      "url": "https://www.banpie.info/blog/claude-custom-writing-style-tutorial/",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "banpie-xhs"
+    },
+    {
+      "url": "https://www.douyin.com/user/MS4wLjABAAAAFTvYX2N3DmyYwJXbQ3RIurdOsLphxaob_Tc51CEkUoo",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "dingyanzhi-douyin"
+    },
+    {
+      "url": "https://www.douyin.com/user/MS4wLjABAAAAccw_6pHbTgGLOFXtLh2vNTeXPtTS6vGPiTjyDvjJaAv4HAmMkaqvS3k1aZL7ret0",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "zhangyuncai-douyin"
+    },
+    {
+      "url": "https://www.douyin.com/video/7641911668615826734",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "zhangyuncai-douyin"
+    },
+    {
+      "url": "https://www.coursera.org/learn/ai-for-everyone",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "ai-for-everyone"
+    },
+    {
+      "url": "https://www.deeplearning.ai/courses/ai-for-everyone",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "ai-for-everyone"
+    },
+    {
+      "url": "https://www.coursera.org/specializations/ai-essentials-google",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "google-ai-essentials"
+    },
+    {
+      "url": "https://github.com/microsoft/AI-For-Beginners",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "ai-for-beginners-ms"
+    },
+    {
+      "url": "https://github.com/microsoft/generative-ai-for-beginners",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "genai-for-beginners-ms"
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/shows/generative-ai-for-beginners/",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "genai-for-beginners-ms"
+    },
+    {
+      "url": "https://higher.smartedu.cn/ai/general-courses",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "smartedu-ai-general"
+    },
+    {
+      "url": "https://www.elementsofai.com/",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "elements-of-ai"
+    },
+    {
+      "url": "https://www.elementsofai.com/faq/i-have-passed-an-elements-of-ai-course-where-is-my-certificate-2",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "elements-of-ai"
+    },
+    {
+      "url": "https://huggingface.co/learn/llm-course/chapter1/1",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "hf-llm-course"
+    },
+    {
+      "url": "https://huggingface.co/learn/llm-course/zh-CN/chapter1/1",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "hf-llm-course"
+    },
+    {
+      "url": "https://academy.openai.com/",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "openai-academy"
+    },
+    {
+      "url": "https://help.openai.com/en/articles/20001270-openai-academy-courses",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "openai-academy"
+    },
+    {
+      "url": "https://openai.com/index/expanding-openai-academy-with-new-learning-paths/",
+      "status": "ok",
+      "http_status": 200,
+      "detail": "",
+      "source_id": "openai-academy"
+    }
+  ]
+}
