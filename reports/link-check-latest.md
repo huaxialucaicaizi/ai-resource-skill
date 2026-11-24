@@ -1,7 +1,7 @@
-# Link check — 2026-11-23T21:51:03.755614+00:00
+# Link check — 2026-11-24T06:46:23.708865+00:00
 
-- Total: 84
-- ok: 83
+- Total: 87
+- ok: 86
 - 需人工确认: 1
 - dead: 0
 
@@ -56,8 +56,6 @@
 - `kaola-wang` — https://www.xiaohongshu.com/user/profile/65d6bc16000000001700780e — HTTP 200 — 
 - `weixiao-bangong` — https://www.douyin.com/user/MS4wLjABAAAAd9F0YTDpiF2a7_hU3ukXL7ytpRVVm09EwqZ6xvY1GohGfJTQqTGCIVl-z6zhxtou — HTTP 200 — 
 - `wangxiaoer-data` — https://www.douyin.com/user/MS4wLjABAAAA0ITSyg9jKeT1x5pIF0G7W8547uslYxzsK_IQJQ_UAxGkRHOqAuiLyiVJLtcCEzT3 — HTTP 200 — 
-- `banpie-xhs` — https://www.xiaohongshu.com/user/profile/5d2dd068000000001600f52c — HTTP 200 — 
-- `zhangyuncai-douyin` — https://www.douyin.com/user/MS4wLjABAAAAccw_6pHbTgGLOFXtLh2vNTeXPtTS6vGPiTjyDvjJaAv4HAmMkaqvS3k1aZL7ret0 — HTTP 200 — 
 - `meta-x` — https://x.com/AIatMeta — HTTP 200 — 
 - `xai-x` — https://x.com/SpaceXSI — HTTP 200 — 
 - `mistral-x` — https://x.com/MistralAI — HTTP 200 — 
@@ -76,6 +74,11 @@
 - `alexwang-x` — https://x.com/alexandr_wang — HTTP 200 — 
 - `truell-x` — https://x.com/mntruell — HTTP 200 — 
 - `musk-x` — https://x.com/elonmusk — HTTP 200 — 
+- `banpie-xhs` — https://www.xiaohongshu.com/user/profile/5d2dd068000000001600f52c — HTTP 200 — 
+- `banpie-xhs` — https://www.banpie.info/blog/claude-custom-writing-style-tutorial/ — HTTP 200 — 
+- `dingyanzhi-douyin` — https://www.douyin.com/user/MS4wLjABAAAAFTvYX2N3DmyYwJXbQ3RIurdOsLphxaob_Tc51CEkUoo — HTTP 200 — 
+- `zhangyuncai-douyin` — https://www.douyin.com/user/MS4wLjABAAAAccw_6pHbTgGLOFXtLh2vNTeXPtTS6vGPiTjyDvjJaAv4HAmMkaqvS3k1aZL7ret0 — HTTP 200 — 
+- `zhangyuncai-douyin` — https://www.douyin.com/video/7641911668615826734 — HTTP 200 — 
 - `ai-for-everyone` — https://www.coursera.org/learn/ai-for-everyone — HTTP 200 — 
 - `ai-for-everyone` — https://www.deeplearning.ai/courses/ai-for-everyone — HTTP 200 — 
 - `google-ai-essentials` — https://www.coursera.org/specializations/ai-essentials-google — HTTP 200 — 

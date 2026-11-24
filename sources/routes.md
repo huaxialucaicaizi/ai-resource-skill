@@ -26,5 +26,5 @@
 | --- | ---: | --- |
 | 行业讯息 | 8 | [industry.md](./industry.md) |
 | 产品动态 | 26 | [products.md](./products.md) |
-| 场景教程 | 17 | [tutorials.md](./tutorials.md) |
+| 场景教程 | 18 | [tutorials.md](./tutorials.md) |
 | 系统学习 | 10 | [learning.md](./learning.md) |

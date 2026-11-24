@@ -24,7 +24,11 @@ License：MIT
 > **周报 / digest 不在 v1**，计划后续再做。  
 > **名单维护：每月复查一次**（链接、免费/付费政策、账号是否仍可用）。
 
-主数据查询日期：**2026-11-20**（Asia/Shanghai）；后来补录的条目有各自的查询日期（如 2026-11-23）。看不到的字段一律写「未知」，不估算。
+主数据查询日期：**2026-11-20**（Asia/Shanghai）；后来补录的条目有各自的查询日期（如 2026-11-23、2026-11-24）。看不到的字段一律写「未知」，不估算。
+
+**本地跑脚本依赖**：读写 YAML 需要 `PyYAML`（`pip install pyyaml`）。`pick.py` / `check_links.py` / `generate_markdown.py` 都依赖它。Skill 离线对话本身不需要安装 Python 包（助手直接读 `references/sources.yaml` 即可）。
+
+**录视频演示建议**：安装 Skill 后，用「我是运营，想学用 AI 写小红书 / 短视频文案」触发 `copywriting` 路线；助手应先给保姆教程、再给博主，并诚实说明写文案条目目前偏少。
 
 ---
 
@@ -87,7 +91,7 @@ rm -rf /tmp/ai-resource-skill ~/.cursor/skills/ai-resource-guide && git clone --
 | --- | ---: | --- |
 | 行业讯息 | 8 | 中文科技 / AI 媒体（公众号等；智东西为备选） |
 | 产品动态 | 26 | X 官方公司号与负责人等（`x_list_url` 暂为 null，公开列表待建） |
-| 场景教程 | 17 | PPT / vibe coding / 视频设计 / 数据分析 / 写文案（含备选；可挂保姆教程） |
+| 场景教程 | 18 | PPT / vibe coding / 视频设计 / 数据分析 / 写文案（含备选；可挂保姆教程） |
 | 系统学习 | 10 | 免费或官方课程入口 + 整理者本人账号（排序靠后） |
 
 每条源都包含：语言、国内能否直接访问、免费/付费、适合谁、数据（观测数字与口径）、查询日期。场景教程可带 `tutorials` 字段（核实到的保姆教程）。
@@ -150,7 +154,7 @@ data/unknown-items.md      # 未知项清单
 sources/                   # 按分类生成的可读 Markdown + 路线 + 避坑
 skills/ai-resource-guide/  # Agent Skill（含离线 references/sources.yaml）
 scripts/check_links.py     # 链接检查
-.github/workflows/         # 每周链接巡检
+.github/workflows/         # 每月链接巡检
 ```
 
 ---
@@ -189,7 +193,11 @@ This repository provides:
 > A **weekly digest is planned later** (not in v1).  
 > **List maintenance: review once a month.**
 
-Primary observation date: **2026-11-20** (Asia/Shanghai); later entries keep their own query dates. Unknown fields stay unknown — no estimates.
+Primary observation date: **2026-11-20** (Asia/Shanghai); later entries keep their own query dates (e.g. 2026-11-23, 2026-11-24). Unknown fields stay unknown — no estimates.
+
+**Local script dependency**: YAML tooling needs `PyYAML` (`pip install pyyaml`). Offline Skill chat does not require installing Python packages — the agent can read `references/sources.yaml` directly.
+
+**Demo tip**: after install, try “I’m in ops; I want to learn AI copywriting for Xiaohongshu / short video” to hit the `copywriting` route (tutorials first; list is intentionally short and honest).
 
 ---
 
@@ -244,7 +252,7 @@ Data: [data/sources.yaml](data/sources.yaml) · Unknowns: [data/unknown-items.md
 | --- | ---: | --- |
 | 行业讯息 (Industry) | 8 | Chinese media (智东西 marked alternate) |
 | 产品动态 (Products) | 26 | Official X accounts; `x_list_url` is null pending a public list |
-| 场景教程 (Tutorials) | 17 | PPT / coding / video / data / copywriting (optional babysitter tutorials) |
+| 场景教程 (Tutorials) | 18 | PPT / coding / video / data / copywriting (optional babysitter tutorials) |
 | 系统学习 (Learning) | 10 | Official courses + curator’s own accounts (sorted last) |
 
 ---

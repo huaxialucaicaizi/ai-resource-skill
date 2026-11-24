@@ -116,6 +116,8 @@ def write_category(doc, category: str, filename: str, intro: str):
             lines.append(f"- **链接说明**：{s['url_notes']}")
         if s.get("ppt_match"):
             lines.append(f"- **PPT 对口程度**：{s['ppt_match']}")
+        if s.get("copywriting_match"):
+            lines.append(f"- **写文案对口程度**：{s['copywriting_match']}")
         tuts = s.get("tutorials") or []
         if tuts:
             lines.append("- **保姆教程**：")
